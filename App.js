@@ -1,3 +1,7 @@
+import { StackNavigator } from 'react-navigation'
+
 import { Main } from './src'
 
-export default Main
+export default StackNavigator({
+    Main: { screen: Main }
+})

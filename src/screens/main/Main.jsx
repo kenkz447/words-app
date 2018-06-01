@@ -1,7 +1,9 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React from 'react'
+import { Text, View } from 'react-native'
 
 import styles from './Main.styles'
+import { Button } from 'controls'
+
 
 export class Main extends React.Component {
   render() {
@@ -10,7 +12,8 @@ export class Main extends React.Component {
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
+        <Button>Start</Button>
       </View>
-    );
+    )
   }
 }
