@@ -1,3 +1,11 @@
 {
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "typescript.quickSuggestionsForPaths": false,
+    "path-intellisense.mappings": {
+        "\\": "${workspaceRoot}",
+        "@": "${workspaceRoot}/src"
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    }
 }

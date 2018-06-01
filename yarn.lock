@@ -813,6 +813,10 @@ ansi@^0.3.0, ansi@~0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/ansi/-/ansi-0.3.1.tgz#0c42d4fb17160d5a9af1e484bace1c66922c1b21"
 
+antd-mobile-rn@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/antd-mobile-rn/-/antd-mobile-rn-0.0.0.tgz#5f40423c557fe60d2ab4e780bf7e6d7bac601624"
+
 antd-mobile@^2.1.11:
   version "2.1.11"
   resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-2.1.11.tgz#24bf37ab73497d20284088ed629d150691066154"
@@ -3274,6 +3278,10 @@ flat-cache@^1.2.1:
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
+
+flow-bin@^0.73.0:
+  version "0.73.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.73.0.tgz#da1b90a02b0ef9c439f068c2fc14968db83be425"
 
 follow-redirects@^1.2.3:
   version "1.5.0"

@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation'
 
-import { Main } from './src'
+import { Home } from './src'
 
 export default StackNavigator({
-    Main: { screen: Main }
+    Main: { screen: Home }
 })
