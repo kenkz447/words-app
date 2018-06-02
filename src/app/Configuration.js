@@ -1,4 +1,4 @@
-import { Worker } from 'react-native-workers'
+import { Thread } from 'react-native-threads'
 
 import { AppEvent } from './Type'
 
@@ -16,7 +16,7 @@ export class Configuration {
     }
 
     useWorker(workerPath: string, setup: (worker) => void) {
-        const newWorker = new Worker(workerPath)
+        const newWorker = new Thread (workerPath)
         setup(newWorker)
     }
 

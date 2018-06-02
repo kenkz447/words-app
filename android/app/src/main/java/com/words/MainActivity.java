@@ -1,6 +1,7 @@
 package com.words;
 
 import com.facebook.react.ReactActivity;
+import com.reactlibrary.RNThreadPackage;
 
 public class MainActivity extends ReactActivity {
 

@@ -1,4 +1,4 @@
-import { self } from 'react-native-workers'
+import { self } from 'react-native-threads'
 
 self.onmessage = (message) => {
     console.log('Worker received message', message)

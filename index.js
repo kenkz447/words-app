@@ -4,4 +4,4 @@ import { startup } from './src'
 const app = startup()
 const Navigator = app.getNavigator()
 
-AppRegistry.registerComponent('wordsclient', () => Navigator)
+AppRegistry.registerComponent('words', () => Navigator)
