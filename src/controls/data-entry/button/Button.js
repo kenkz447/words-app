@@ -7,10 +7,6 @@ import {
 
 import buttonStyles from './Button.styles'
 
-interface ButtonProps extends AntdButtonProps {
-    color: 'buttonWhite' | 'buttonBlack'
-}
-
-export function Button(props: ButtonProps) {
+export function Button(props: AntdButtonProps) {
     return (<AntdButton  {...props} style={buttonStyles} />)
 }
