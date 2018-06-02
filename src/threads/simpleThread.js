@@ -4,4 +4,4 @@ self.onmessage = (message) => {
     console.log('Worker received message', message)
 }
 
-self.postMessage('Ping')
+self.postMessage('Simple thread: Ping!')

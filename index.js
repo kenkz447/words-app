@@ -1,7 +1,6 @@
 import { AppRegistry } from 'react-native'
 import { startup } from './src'
 
-const app = startup()
-const Navigator = app.getNavigator()
+const App = startup()
 
-AppRegistry.registerComponent('words', () => Navigator)
+AppRegistry.registerComponent('words', () => App)

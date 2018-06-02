@@ -1,1 +1,1 @@
-export type AppEvent = 'fetch' | 'onstart'
+export type AppEvent = 'fetch' | 'beforeStart' | 'onStart'

@@ -1,26 +1,24 @@
-import { StackNavigator } from 'react-navigation'
+import React from 'react'
 
-import { Configuration } from './Configuration'
+interface AppProps {
+    Navigator: React.ComponentType,
+    beforeStart: () => void,
+    onStart: () => void,
+}
 
-export class App {
-    static instance
-    static getInstance() {
-        return this.instance
+export const App = (appProps: AppProps) => class AppWrapper extends React.Component {
+
+    constructor(props) {
+        super(props)
+        appProps.beforeStart && appProps.beforeStart()
     }
 
-    Screens: React.ComponentType[]
-
-    constructor(props: Configuration) {
-        this.instance = this
-        this.Screens = props.registeredSreens
+    componentDidMount(){
+        appProps.onStart && appProps.onStart()
     }
 
-    getNavigator() {
-        const screens = {}
-
-        for (const Screen of this.Screens)
-            screens[Screen.name] = Screen
-
-        return StackNavigator(screens)
+    render() {
+        const { Navigator } = appProps
+        return <Navigator />
     }
 }
