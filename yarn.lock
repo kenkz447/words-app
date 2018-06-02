@@ -6288,6 +6288,10 @@ react-native-web-maps@^0.1.0:
   dependencies:
     react-google-maps "^7.3.0"
 
+react-native-workers@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-workers/-/react-native-workers-0.3.1.tgz#2ac4365da727567239e806c081016f59f3d0199e"
+
 react-native@~0.55.2:
   version "0.55.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.55.4.tgz#eecffada3750a928e2ddd07cf11d857ae9751c30"

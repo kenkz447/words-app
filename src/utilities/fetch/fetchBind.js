@@ -1,6 +1,5 @@
 import { fetchHandler } from './fetchHandler'
 
-
 export function fetchBind(payload: FetchStartPayload) {
     return new Promise((resolve, reject) => {
         const promisePayload = { ...payload }

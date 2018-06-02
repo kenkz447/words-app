@@ -1,7 +1,6 @@
-import { StackNavigator } from 'react-navigation'
 
-import { Home } from './src'
+import { startup } from './src'
 
-export default StackNavigator({
-    Main: { screen: Home }
-})
+const app = startup()
+
+export default app.getNavigator()
