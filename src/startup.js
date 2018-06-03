@@ -25,7 +25,13 @@ export function startup(): React.ComponentType {
         // on fetching
     })
 
-    appConfiguration.registerScreen(Home)
+    appConfiguration.registerScreen({
+        name: Home.name,
+        screen: Home,
+        navigationOptions: ({ navigation }) => ({
+            title: 'Home',
+        })
+    })
 
     return appConfiguration.createApp()
 }

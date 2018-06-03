@@ -6,6 +6,9 @@
         "paths": {
             "@/controls": [
                 "src/controls"
+            ],
+            "@/configs": [
+                "src/configs"
             ]
         }
     },

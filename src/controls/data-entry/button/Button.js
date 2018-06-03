@@ -8,5 +8,5 @@ import {
 import buttonStyles from './Button.styles'
 
 export function Button(props: AntdButtonProps) {
-    return (<AntdButton  {...props} style={buttonStyles} />)
+    return (<AntdButton  {...props}/>)
 }

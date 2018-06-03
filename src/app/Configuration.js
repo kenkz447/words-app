@@ -37,7 +37,7 @@ export class Configuration {
         }
 
         return App({
-            Navigator: createStackNavigator(appScreens),
+            Navigator: createStackNavigator(appScreens, { title: 'Welcome', header: { visible: false } }),
             beforeStart: this.eventHandlers.beforeStart,
             onStart: this.eventHandlers.onStart
         })
