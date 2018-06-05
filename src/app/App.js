@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface AppProps {
-    Navigator: React.ComponentType,
+    render: React.ComponentType,
     beforeStart: () => void,
     onStart: () => void,
 }
@@ -13,12 +13,11 @@ export const App = (appProps: AppProps) => class AppWrapper extends React.Compon
         appProps.beforeStart && appProps.beforeStart()
     }
 
-    componentDidMount(){
+    componentDidMount() {
         appProps.onStart && appProps.onStart()
     }
 
     render() {
-        const { Navigator } = appProps
-        return <Navigator />
+        return appProps.render()
     }
 }

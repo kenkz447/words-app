@@ -1,13 +1,17 @@
 {
     "plugins": [
+        "flowtype",
         "react-native"
     ],
     "extends": [
+        "plugin:flowtype/recommended",
         "react-app"
     ],
     "rules": {
         "semi": [1, "never"],
         "no-extra-semi": "warn",
+        "no-mixed-operators": 0,
+        "flowtype/no-types-missing-file-annotation": 0,
         "react-native/no-unused-styles": 2,
         "react-native/split-platform-components": 2,
         "react-native/no-inline-styles": 2,

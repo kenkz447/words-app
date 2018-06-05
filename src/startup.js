@@ -1,4 +1,6 @@
-import { Configuration } from './app'
+import { reducer as formReducer } from 'redux-form'
+
+import { Configuration, createReduxStore } from './app'
 import { Home } from './screens'
 
 export function startup(): React.ComponentType {
@@ -6,19 +8,28 @@ export function startup(): React.ComponentType {
         appTitle: 'Words'
     })
 
-    appConfiguration.useWorker('src/threads/simpleThread.js', (worker) => {
-        worker.postMessage('Start a simple thread...')
-        worker.onmessage = (message) => {
+    const reduxStore = createReduxStore({
+        reducers: {
+            form: formReducer
+        }
+    })
+
+    appConfiguration.useReduxStore(reduxStore)
+
+    appConfiguration.useAdditionalThread('src/threads/simpleThread.js', function threadWorker(thread) {
+        thread.postMessage('Start a simple thread...')
+        thread.onmessage = (message) => {
             console.log(message)
         }
     })
 
     appConfiguration.addEventListener('beforeStart', () => {
         console.disableYellowBox = true
+        console.info('App rendering...')
     })
 
     appConfiguration.addEventListener('onStart', () => {
-        console.log('App started')
+        console.info('App started!')
     })
 
     appConfiguration.addEventListener('fetch', (e) => {

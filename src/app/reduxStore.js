@@ -1,8 +1,7 @@
 import { createStore, combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form'
 
-const reducers = combineReducers({
-    form: formReducer
-})
+export function createReduxStore({ reducers, middlewares, initStore }) {
+    const combinedReducers = combineReducers(reducers)
 
-export const reduxStore = createStore(reducers)
+    return createStore(combinedReducers, initStore, middlewares)
+}
