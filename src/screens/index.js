@@ -1,1 +1,2 @@
-export * from './screen-home'
+export * from './screen-login'
+export * from './screen-register'

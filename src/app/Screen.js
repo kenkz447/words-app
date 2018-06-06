@@ -2,12 +2,21 @@ import React from 'react'
 
 export const NavigationContext = React.createContext('navigation')
 
-export function Screen(name: string) {
-    return (ScreenComponent) => (props) => {
-        return (
-            <NavigationContext.Provider value={props.navigation}>
-                <ScreenComponent {...props} />
-            </NavigationContext.Provider >
-        )
-    }
+let currentNavigation
+
+export function getCurrentNavigation() {
+    return currentNavigation
+}
+
+function setCurrentNavigation(navigation) {
+    currentNavigation = navigation
+}
+
+export const Screen = (ScreenComponent) => (props) => {
+    setCurrentNavigation(props.navigation)
+    return (
+        <NavigationContext.Provider value={props.navigation}>
+            <ScreenComponent {...props} />
+        </NavigationContext.Provider >
+    )
 }

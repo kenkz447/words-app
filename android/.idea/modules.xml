@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-threads/android/react-native-threads.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-threads/android/react-native-threads.iml" />
-      <module fileurl="file://C:\Users\kenkz447\Documents\Projects\words\words-app\node_modules\react-native-threads\android\react-native-threads.iml" filepath="C:\Users\kenkz447\Documents\Projects\words\words-app\node_modules\react-native-threads\android\react-native-threads.iml" />
-      <module fileurl="file://C:\Users\kenkz447\Documents\Projects\words\words-app\node_modules\react-native-threads\android\react-native-threads-react-native-threads.iml" filepath="C:\Users\kenkz447\Documents\Projects\words\words-app\node_modules\react-native-threads\android\react-native-threads-react-native-threads.iml" />
       <module fileurl="file://$PROJECT_DIR$/words.iml" filepath="$PROJECT_DIR$/words.iml" />
     </modules>
   </component>

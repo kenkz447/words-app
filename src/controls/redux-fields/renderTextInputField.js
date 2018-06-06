@@ -2,23 +2,33 @@ import * as React from 'react'
 import { Input } from '../data-entry'
 import { Toast } from '../feedback'
 
-export function renderTextInputField(props) {
-    const { input, meta, label, type, placeholder } = props
-    const { error, touched } = meta
+export class RenderTextInputField extends React.Component {
+    _input: Input
 
-    const isError = touched && (error !== undefined)
+    render() {
+        const { input, meta, label, type, placeholder, onSubmitEditing } = this.props
+        const { error, touched } = meta
 
-    return (
-        <Input
-            {...input}
-            type={type}
-            placeholder={placeholder}
-            error={isError}
-            onErrorClick={isError && function inputErrorClick(e) {
-                Toast.info(error, 1)
-            }}
-        >
-            {label}
-        </Input>
-    )
+        const isError = touched && (error !== undefined)
+
+        return (
+            <Input
+                {...input}
+                type={type}
+                placeholder={placeholder}
+                error={isError}
+                onErrorClick={isError && function inputErrorClick(e) {
+                    Toast.info(error, 1)
+                }}
+                onSubmitEditing={onSubmitEditing}
+                ref={(element) => this._input = element}
+            >
+                {label}
+            </Input>
+        )
+    }
+
+    focus() {
+        this._input.focus()
+    }
 }

@@ -1,5 +1,5 @@
 import { fetchHandler } from './fetchHandler'
-import { AuthHelper } from '../auth'
+import { UserManager } from '../UserManager'
 
 interface FetchStartPayload {
     url: string,
@@ -19,7 +19,7 @@ export class FetchHelper {
     static initFetchHelperProps: FetchHelperProps = {
         onStart: async (payload) => {
             const newPayload = { ...payload }
-            const token = await AuthHelper.asyncGetToken()
+            const token = await UserManager.asyncGetToken()
 
             if (token) {
                 const authBearer = token && `Bearer ${token}`

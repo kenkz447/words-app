@@ -1,10 +1,4 @@
-import React from 'react'
-
-import {
-    default as AntdInput,
-    InputItemProps as AntdInputItemProps
+export {
+    default as Input,
+    InputItemProps
 } from 'antd-mobile/lib/input-item'
-
-export function Input(props: AntdInputItemProps) {
-    return (<AntdInput  {...props} />)
-}

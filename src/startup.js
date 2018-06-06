@@ -1,7 +1,7 @@
 import { reducer as formReducer } from 'redux-form'
 
 import { Configuration, createReduxStore } from '@/app'
-import { Home } from '@/screens'
+import { Login, Register } from '@/screens'
 import { text } from '@/utilities'
 
 export function startup(): React.ComponentType {
@@ -34,18 +34,26 @@ export function startup(): React.ComponentType {
     })
 
     appConfiguration.registerScreen({
-        name: Home.name,
-        screen: Home,
-        navigationOptions: ({ navigation }) => ({
+        name: 'Login',
+        screen: Login,
+        navigationOptions: () => ({
             title: text('Đăng nhập'),
         })
     })
 
     appConfiguration.registerScreen({
         name: 'Register',
-        screen: () => null,
-        navigationOptions: ({ navigation }) => ({
+        screen: Register,
+        navigationOptions: () => ({
             title: text('Đăng Ký'),
+        })
+    })
+
+    appConfiguration.registerScreen({
+        name: 'Home',
+        screen: () => null,
+        navigationOptions: () => ({
+            title: text('Trang chủ'),
         })
     })
 

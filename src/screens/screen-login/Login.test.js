@@ -1,9 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import { Home } from './Home'
+import { Login } from './Home'
 
 it('renders without crashing', () => {
-  const rendered = renderer.create(<Home />).toJSON()
+  const rendered = renderer.create(<Login />).toJSON()
   expect(rendered).toBeTruthy()
 })
