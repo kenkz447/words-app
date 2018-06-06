@@ -1,0 +1,1 @@
+export { default as Toast } from 'antd-mobile/lib/toast'

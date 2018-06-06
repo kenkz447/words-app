@@ -1,16 +1,7 @@
-function getToken() {
-    return ''
-}
-
 export async function fetchHandler(payload) {
     try {
-        const token = getToken()
-        const authBearer = token && `Bearer ${token}`
 
         const headers = payload.headers
-
-        if (payload.noAuth !== true)
-            headers['Authorization'] = authBearer
 
         payload.requestInit = {
             method: payload.method,

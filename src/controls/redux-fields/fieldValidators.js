@@ -1,0 +1,1 @@
+export const fieldRequired = (errorMessage: string) => (value) => !value && errorMessage

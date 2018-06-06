@@ -17,9 +17,9 @@ interface ScreenInfo {
 }
 
 export class Configuration {
-    eventHandlers: { [key: AppEvent]: (e) => void }
-    registeredSreens: React.ComponentType[]
-    reduxStore: any
+    static eventHandlers: { [key: AppEvent]: (e) => void }
+    static registeredSreens: React.ComponentType[]
+    static reduxStore: any
 
     constructor(props: ConfigurationProps) {
         this.eventHandlers = {}

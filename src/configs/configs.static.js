@@ -1,0 +1,1 @@
+export const apiEntry = 'https://words-app-server.herokuapp.com'

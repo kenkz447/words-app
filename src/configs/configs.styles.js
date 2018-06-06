@@ -4,7 +4,7 @@ type AppStyles = { [key: string]: FlexStyle & TextStyle }
 
 export const appStyles: AppStyles = {
     page: {
-        padding: 15
+        // padding: 15
     },
     container: {
         flex: 1,

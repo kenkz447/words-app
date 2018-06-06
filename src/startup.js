@@ -1,7 +1,8 @@
 import { reducer as formReducer } from 'redux-form'
 
-import { Configuration, createReduxStore } from './app'
-import { Home } from './screens'
+import { Configuration, createReduxStore } from '@/app'
+import { Home } from '@/screens'
+import { text } from '@/utilities'
 
 export function startup(): React.ComponentType {
     const appConfiguration = new Configuration({
@@ -32,15 +33,19 @@ export function startup(): React.ComponentType {
         console.info('App started!')
     })
 
-    appConfiguration.addEventListener('fetch', (e) => {
-        // on fetching
-    })
-
     appConfiguration.registerScreen({
         name: Home.name,
         screen: Home,
         navigationOptions: ({ navigation }) => ({
-            title: 'Home',
+            title: text('Đăng nhập'),
+        })
+    })
+
+    appConfiguration.registerScreen({
+        name: 'Register',
+        screen: () => null,
+        navigationOptions: ({ navigation }) => ({
+            title: text('Đăng Ký'),
         })
     })
 

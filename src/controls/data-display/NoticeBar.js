@@ -1,0 +1,1 @@
+export { default as NoticeBar } from 'antd-mobile/lib/notice-bar'
